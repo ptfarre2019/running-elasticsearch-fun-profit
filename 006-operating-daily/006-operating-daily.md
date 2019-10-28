@@ -18,7 +18,7 @@ done
 
 ### Mass optimize, indexes with the most deleted docs first
 
-Lucene, which powers Elasticsearch has a specific behavior when it comes to delete or update documents. Instead of actually deleting or overwriting the data, if flags it as deleted and write a new one. The only way to get rid of a deleted document is to run an *optimize* on your indexes.
+Lucene, which powers Elasticsearch, has a specific behavior when it comes to delete or update documents. Instead of actually deleting or overwriting the data, it flags it as deleted and write a new one. The only way to get rid of a deleted document is to run an *optimize* on your indexes.
 
 This snippet sorts your existing indexes by the number of deleted documents before it runs the optimize.
 
